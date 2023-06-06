@@ -1,0 +1,57 @@
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import processing.core.PApplet;
+
+public class CarTest {
+   int id;
+   String brand;
+   String model;
+   int year;
+   int price;
+  @Test
+    public void testFirstCar(int id, String brand, String model, int year, int price) {
+      
+    this.id = id;
+    this.id = id;
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+    this.price = price;
+    
+    
+    int expectedID = 0; 
+    int actualID= id;
+    
+    String expectedBrand = "Toyota" ; 
+    String actualBrand = brand;
+    
+    String expectedModel = "Hilux" ; 
+    String actualModel = model;
+    
+    int expectedYear = 2023; 
+    int actualYear = year;
+    
+    int expectedPrice = 109595; 
+    int actualPrice = price;
+    
+    
+       assertEquals("ID mismatch: expected " + expectedID + ", but was " + 
+       actualID, expectedID, actualID);
+   
+       assertEquals("Brand mismatch: expected " + expectedBrand + ", but was " + 
+       actualBrand, expectedBrand, actualBrand);
+       
+       assertEquals("Model mismatch: expected " + expectedModel + ", but was " + 
+       actualModel, expectedModel, actualModel);
+       
+       assertEquals("Year mismatch: expected " + expectedYear + ", but was " + 
+       actualYear, expectedYear, actualYear);
+       
+       assertEquals("Year mismatch: expected " + expectedPrice + ", but was " + 
+       actualPrice, expectedPrice, actualPrice);
+       
+ }
+}
